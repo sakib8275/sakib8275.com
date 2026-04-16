@@ -1,0 +1,41 @@
+[build]
+  publish = "."
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = false
+  minify = false
+
+[build.processing.js]
+  bundle = false
+  minify = false
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = false
+
+# ── URL rewrites ────────────────────────────────────────────────
+# /insights/{slug}  →  insight.html?slug={slug}
+# Serves the single-post template at the clean canonical URL.
+[[redirects]]
+  from   = "/insights/:slug"
+  to     = "/insight.html?slug=:slug"
+  status = 200
+
+# ── Security Headers ────────────────────────────────────────────
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    # CSP: 'unsafe-inline' required for inline <script>/<style> blocks throughout the site.
+    # connect-src allows the two CORS proxies used by the news aggregator.
+    # cdn.jsdelivr.net locked to sha384-verified Chart.js only (SRI on the tag itself).
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://api.allorigins.win https://corsproxy.io; img-src 'self' data:; frame-ancestors 'none'; object-src 'none'; base-uri 'self';"

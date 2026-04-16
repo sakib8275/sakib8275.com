@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--
+  =============================================
+  HOW TO USE THIS TEMPLATE
+  =============================================
+  1. Make a copy of this file and rename it to your article slug
+     e.g.  research/my-article-title.html
+
+  2. Search for every [REPLACE: ...] marker and fill it in.
+
+  3. For charts:
+     - Each chart needs a <canvas id="chartN"> in the body
+       and a matching new Chart(...) call in the <script> at the bottom.
+     - Copy the "CHART BLOCK" section to add more charts.
+     - Delete the whole block if you don't need a chart.
+
+  4. Add your article to the ARTICLES array in research.html
+     so it appears on the listing page.
+
+  5. Open this file in a browser to preview it.
+  =============================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- REPLACE: Update the title and description -->
+  <title>[REPLACE: Article Title] — MD. Nazmus Sakib</title>
+  <meta name="description" content="[REPLACE: One or two sentence summary of the article for SEO.]" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+
+  <!-- Chart.js — only needed if you include charts. Delete if not using charts. -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- ===== NAVBAR — do not change ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">N<span>S</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../news.html">News</a></li>
+        <li><a href="../insights.html">Insights</a></li>
+        <li><a href="../index.html#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== ARTICLE CONTENT ===== -->
+  <main class="article-page">
+
+    <!-- Back link -->
+    <a href="../research.html" class="article-back-link">← Back to Research</a>
+
+    <!-- ===== ARTICLE HEADER ===== -->
+    <header class="article-header">
+
+      <!-- REPLACE: Category label — e.g. "Research", "Analysis", "Case Study", "Opinion" -->
+      <p class="section-label article-label">[REPLACE: Category]</p>
+
+      <!-- REPLACE: Full article title (keep under 80 characters) -->
+      <h1 class="article-title">[REPLACE: Your Article Title Here]</h1>
+
+      <!-- REPLACE: One or two sentence abstract / subtitle -->
+      <p class="article-subtitle">[REPLACE: A brief subtitle or abstract that summarizes what this article is about and why it matters.]</p>
+
+      <!-- REPLACE: Update author, date, and read time -->
+      <div class="article-meta-row">
+        <span class="article-meta-item">✍ [REPLACE: Author Name]</span>
+        <span class="article-meta-item">📅 [REPLACE: Month Year]</span>
+        <span class="article-meta-item">⏱ [REPLACE: X min read]</span>
+      </div>
+
+      <!-- REPLACE: Add or remove <span> tags for your topics.
+           These tags must match what you put in the ARTICLES array in research.html -->
+      <div class="article-tags-row">
+        <span class="tag">[REPLACE: Tag 1]</span>
+        <span class="tag">[REPLACE: Tag 2]</span>
+        <span class="tag">[REPLACE: Tag 3]</span>
+      </div>
+
+    </header>
+
+    <!-- ===== ARTICLE BODY ===== -->
+    <!--
+      FORMATTING GUIDE:
+      - Use <h2> for major section headings
+      - Use <h3> for subsections within a section
+      - Use <p> for regular paragraphs (one <p> per paragraph)
+      - Use <ul><li> for bullet lists
+      - Use <blockquote> for key findings, notable quotes, or callout statements
+      - Use <strong> to bold important terms
+    -->
+    <div class="article-body">
+
+      <!-- REPLACE: Write your introduction here -->
+      <h2>Introduction</h2>
+      <p>[REPLACE: Write your introduction paragraph here. Explain the topic, why it matters, and what this article will cover.]</p>
+
+      <p>[REPLACE: You can add more paragraphs by copying a &lt;p&gt; tag.]</p>
+
+      <!-- EXAMPLE BLOCKQUOTE — use for key findings or quotes -->
+      <blockquote>
+        [REPLACE: A key insight, finding, or quote from your research.]
+      </blockquote>
+
+      <!-- ===== CHART BLOCK =====
+           Copy this entire block to add another chart.
+           Delete it if you don't need a chart here.
+           IMPORTANT: Each chart must have a unique id (chart1, chart2, chart3...) -->
+      <div class="chart-container">
+        <!-- REPLACE: Chart caption/title shown above the chart -->
+        <div class="chart-container-title">[REPLACE: Chart Title / Caption]</div>
+        <div class="chart-wrap">
+          <!-- REPLACE: Change chart1 to chart2, chart3, etc. for additional charts -->
+          <canvas id="chart1"></canvas>
+        </div>
+      </div>
+      <!-- ===== END CHART BLOCK ===== -->
+
+      <!-- REPLACE: Add more sections as needed -->
+      <h2>Section 2 Title</h2>
+      <p>[REPLACE: Section content here.]</p>
+
+      <h3>Subsection Heading (optional)</h3>
+      <p>[REPLACE: Subsection content here.]</p>
+
+      <!-- EXAMPLE LIST -->
+      <ul>
+        <li>[REPLACE: Bullet point 1]</li>
+        <li>[REPLACE: Bullet point 2]</li>
+        <li>[REPLACE: Bullet point 3]</li>
+      </ul>
+
+      <h2>Conclusion</h2>
+      <p>[REPLACE: Summarize your key findings and their implications here.]</p>
+
+    </div><!-- end .article-body -->
+
+  </main>
+
+  <!-- ===== FOOTER — do not change ===== -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 MD. Nazmus Sakib. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="../index.html">Portfolio</a>
+        <a href="../news.html">News</a>
+        <a href="../research.html">Research</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== NAVBAR SCRIPT ===== -->
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    navToggle.addEventListener('click', () => { navToggle.classList.toggle('open'); navLinks.classList.toggle('open'); });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { navToggle.classList.remove('open'); navLinks.classList.remove('open'); }));
+  </script>
+
+  <!-- =============================================
+  CHART CONFIGURATION
+  =============================================
+  For each <canvas id="chartN"> you added in the body,
+  create a matching new Chart(...) call below.
+
+  CHART TYPES: 'bar', 'line', 'doughnut', 'radar'
+  For horizontal bars, add:  indexAxis: 'y'
+  ============================================= -->
+  <script>
+    // Design system colors — DO NOT CHANGE
+    Chart.defaults.color = '#94a3b8';
+    Chart.defaults.borderColor = 'rgba(148,163,184,0.12)';
+    const ACCENT      = '#14b8a6';
+    const ACCENT_LIGHT = '#5eead4';
+    const ACCENT_FILL = 'rgba(20,184,166,0.25)';
+    const GRID        = 'rgba(148,163,184,0.06)';
+    const TOOLTIP_BG  = '#1e293b';
+
+    // ------ CHART 1 ------
+    // REPLACE labels with your X-axis categories
+    // REPLACE data with your values
+    new Chart(document.getElementById('chart1').getContext('2d'), {
+      type: 'bar',                            // REPLACE: 'bar', 'line', 'doughnut', etc.
+      data: {
+        labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4'],   // REPLACE
+        datasets: [{
+          label: 'Dataset Name',              // REPLACE: shown in legend (set display:false if single dataset)
+          data: [10, 20, 30, 40],             // REPLACE: your numbers
+          backgroundColor: ACCENT_FILL,
+          borderColor: ACCENT,
+          borderWidth: 2,
+          borderRadius: 6,
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },         // set true if you have multiple datasets
+          tooltip: {
+            backgroundColor: TOOLTIP_BG,
+            borderColor: ACCENT,
+            borderWidth: 1,
+            titleColor: '#e2e8f0',
+            bodyColor: '#94a3b8',
+            padding: 10,
+          }
+        },
+        scales: {
+          x: { grid: { color: GRID } },
+          y: { grid: { color: GRID } }
+        }
+      }
+    });
+
+    // ------ CHART 2 (copy from above, change chart1 → chart2) ------
+    // DELETE this comment block if you only have 1 chart
+
+  </script>
+
+</body>
+</html>
